@@ -14,7 +14,7 @@ function Header() {
             <div>NGHỀ NGHIỆP</div>
             <div>VỀ CHÚNG TÔI</div>
             </div>
-            <button id="login-btn">ĐĂNG NHẬP</button>
+            <button className="btn">Đăng nhập</button>
         </div>
     );
 }
