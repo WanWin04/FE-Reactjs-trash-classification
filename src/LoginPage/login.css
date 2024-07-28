@@ -1,0 +1,248 @@
+#page-body {
+  position: relative;
+  height: 70vh; 
+  max-width: 100%;
+}
+
+.login-box{
+  position: absolute;
+  top: 0;
+  right: 200px;
+  width: 450px;
+  height: 450px;
+}
+
+.login-box .form-box.login{
+  left: 0;
+  padding: 0 60px 0 40px;
+}
+  
+.login-box .form-box.login .animation{
+  transform: translateX(0);
+  transition: .7s ease;
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(.1s*var(--j));
+}
+
+.login-box.active .form-box.login .animation{
+  transform: translateX(-120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(.1s*var(--i));
+}
+.login-box.active2 .form-box.login .animation{
+  transform: translateX(-120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(.1s*var(--i));
+}
+
+.login-box .form-box.register{
+  position: absolute;
+  top: -15%;
+  width: 450px;
+  height: 450px;
+  padding: 0 60px 0 40px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.login-box.active .form-box.register{
+  pointer-events: auto;
+}
+
+.login-box .form-box.register .animation{
+  transform: translateX(120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: .7s ease;
+  transition-delay: calc(.1s*var(--j));
+}
+
+.login-box.active .form-box.register .animation{
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(.1s*var(--i));
+}
+
+
+/*  */
+
+
+.login-box .form-box.forgotpass{
+  position: absolute ;
+  top: 0% ;  
+  width: 450px;
+  height: 450px;
+  padding: 0 60px 0 40px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.login-box.active2 .form-box.forgotpass{
+  pointer-events: auto;
+}
+
+.login-box .form-box.forgotpass .animation{
+  right: -10%;
+  height: 50px;
+  width: 90%;
+  transform: translateX(120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: .7s ease;
+  transition-delay: calc(.1s*var(--j));
+}
+
+.login-box.active2 .form-box.forgotpass .animation{
+  right: -10%;
+  height: 50px;
+  width: 90%;
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(.1s*var(--i));
+}
+
+/*  */
+
+
+.form-box h2{
+  font-size: 32px;
+  color: #277114;
+  text-align: center;
+}
+
+.form-box .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 25px 0;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  padding-right: 24px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom-color: green;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+  color: green;;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+}
+
+.forgot {
+  color: #fff;
+  text-decoration: none;
+  margin: -10px 0 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.forgot:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.log-icon {
+  margin-top: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.log-icon i {
+  color: #00f;
+  margin-bottom: 10px;
+}
+.log-icon i:hover {
+  cursor: pointer;
+}
+
+.btn{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: 2px solid lightgreen;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: linear-gradient(#7fbf2c, rgb(28, 142, 0), #76e039, rgb(0, 172, 46));
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn:hover::before{
+  top: 0;
+
+}
+
+
+.form-box .logreg-link{
+  font-size: 14.5px;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0 10px;
+}
+
+.logreg-link p a {
+  color: #277114;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+  
+.logreg-link p a:hover {
+  text-decoration: underline;
+  color:#35901e
+}
+  
