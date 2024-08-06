@@ -72,22 +72,22 @@
 
 
 .login-box .form-box.forgotpass{
-  position: absolute ;
-  top: 0% ;  
+  position: absolute;
+  top: -15%;
   width: 450px;
   height: 450px;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
 }
+
 .login-box.active2 .form-box.forgotpass{
   pointer-events: auto;
 }
 
 .login-box .form-box.forgotpass .animation{
-  right: -10%;
-  height: 50px;
-  width: 90%;
   transform: translateX(120%);
   opacity: 0;
   filter: blur(10px);
@@ -96,15 +96,27 @@
 }
 
 .login-box.active2 .form-box.forgotpass .animation{
-  right: -10%;
-  height: 50px;
-  width: 90%;
   transform: translateX(0);
   opacity: 1;
   filter: blur(0);
   transition-delay: calc(.1s*var(--i));
 }
 
+.forgotpass button {
+  margin-top: 20px;
+}
+
+.backtolog {
+  max-height: fit-content;
+  width: fit-content;
+  color: #fff;
+  margin-left: 48%;
+  display: none;
+}
+.backtolog:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 /*  */
 
 
@@ -166,11 +178,11 @@
 }
 
 .forgot {
+  height: fit-content;
+  width: fit-content;
   color: #fff;
   text-decoration: none;
-  margin: -10px 0 10px;
-  display: flex;
-  justify-content: flex-end;
+  margin: -10px 0 10px 65%;
 }
 .forgot:hover {
   cursor: pointer;
