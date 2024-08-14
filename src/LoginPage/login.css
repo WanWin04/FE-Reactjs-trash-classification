@@ -1,20 +1,31 @@
 #page-body {
   position: relative;
-  height: 70vh; 
+  height: calc(100vh - 100px); 
+  min-height: 30rem;
   max-width: 100%;
+  overflow: hidden;
+  background-color: #AAD0A1;
 }
-
+#main-bg {
+position: absolute;
+min-width: 100vw;
+min-height: calc(100vh - 100px);
+left: 0px;
+top: 0;
+background: url(./images/main-bg.jpg) center no-repeat;
+background-size: contain;
+}
 .login-box{
   position: absolute;
-  top: 0;
-  right: 200px;
-  width: 450px;
-  height: 450px;
+  top: 5vh;
+  right: 0;
+  width: 30rem;
+  min-height: 35rem;
 }
 
 .login-box .form-box.login{
   left: 0;
-  padding: 0 60px 0 40px;
+  padding: 0 3vw 0 3vw;
 }
   
 .login-box .form-box.login .animation{
@@ -40,9 +51,10 @@
 
 .login-box .form-box.register{
   position: absolute;
-  top: -15%;
-  width: 450px;
-  height: 450px;
+  top: 0%;
+  right: 0;
+  width: 30rem;
+  min-height: 32rem;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
@@ -73,9 +85,10 @@
 
 .login-box .form-box.forgotpass{
   position: absolute;
-  top: -15%;
-  width: 450px;
-  height: 450px;
+  top: 0;
+  right: 0;
+  width: 30rem;
+  min-height: 32rem;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
@@ -107,11 +120,12 @@
 }
 
 .backtolog {
+  /* position: absolute; */
   max-height: fit-content;
   width: fit-content;
   color: #fff;
-  margin-left: 48%;
-  display: none;
+  align-self: flex-end;
+  margin:10px 15px;
 }
 .backtolog:hover {
   text-decoration: underline;
@@ -238,7 +252,18 @@
 
 }
 
-
+.btn:last-child {
+  top: -20px;
+  width: fit-content;
+}
+.forgotForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn:last-child::before {
+  background: linear-gradient(#06a700, rgb(27, 135, 0), #49c203, rgb(29, 139, 25)) !important;
+}
 .form-box .logreg-link{
   font-size: 14.5px;
   color: #fff;
@@ -250,7 +275,6 @@
   color: #277114;
   text-decoration: none;
   font-weight: 600;
-
 }
   
 .logreg-link p a:hover {
@@ -258,3 +282,139 @@
   color:#35901e
 }
   
+@media (min-width: 740px) and (max-width: 1023px){
+  #page-body{
+    font-size: 15px !important;
+    height: calc(100vh - 80px); 
+    min-height: 30rem;
+  }
+  #main-bg{
+    min-height: calc(100vh - 80px); 
+    background-size: contain;
+  }
+  .login-box{
+    top:0;
+    right: 0%;
+    width: 25rem;
+  }
+  .form-box h2{
+    font-size: 30px;
+    color: #277114;
+    text-align: center;
+    margin: 20px 0 10px;
+  }
+  .form-box .input-box{
+    height: 10vh;
+    margin: 5vh 0;
+  }
+  .form-box .input-box{
+    height: 40px;
+    margin: 20px 0;
+  }
+  .login-box .form-box.forgotpass{
+    top: 5vh;
+    right: -10vw;
+  }
+  .login-box .form-box.form-box.register{
+    top: 5vh;
+    right: 0vw;
+  }
+
+  .backtolog{
+    text-decoration: underline;
+  }
+  .forgot{
+    text-decoration: underline;
+  }
+  .logreg-link p a {
+    text-decoration: underline;
+  }
+}
+@media (max-width:740px) {
+  #page-body{
+    height: calc(100vh - 60px);
+    min-height: 28rem;
+    font-size: 14px;
+  }
+  .login-box{
+    top:0;
+    right: 10vw;
+    width: 25rem;
+  }
+  .login-box .form-box.forgotpass{
+    top: 5vh;
+    right: 0;
+    width: 50vw;
+  }
+  .login-box .form-box.form-box.register{
+    padding: 0;
+    top: 5vh;
+    right: 2.5vw;
+    width: 50vw;
+  }
+  .backtolog{
+    text-decoration: underline;
+  }
+  .forgot{
+    text-decoration: underline;
+  }
+  .logreg-link p a {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 500px) {
+  .form-box .input-box{
+    height: 40px;
+    margin: 20px 0;
+  }
+  .form-box h2{
+    font-size: 28px;
+    color: #277114;
+    text-align: center;
+    margin: 15px 0 5px;
+  }
+  .login-box{
+    top:0;
+    right: 10vw;
+    width: 80vw;
+    height: calc(100vh - 60px);
+  }
+  .forgot {
+    margin: -10px 0 10px 65%;
+    max-height: fit-content;
+    min-width: fit-content;
+  }
+  .login-box .form-box.forgotpass{
+    top: 5vh;
+    right: 0vw;
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+  }
+  .login-box .form-box.form-box.register{
+    top: 5vh;
+    right: 2.5vw;
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+  }
+  .backtolog{
+    text-decoration: underline;
+  }
+  .forgot{
+    text-decoration: underline;
+  }
+  .logreg-link p a {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+
+
+
+
+
