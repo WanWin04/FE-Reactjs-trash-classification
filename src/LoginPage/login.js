@@ -2,8 +2,35 @@ import './login.css';
 import { FaUser, FaLock, FaFacebookF } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
+import api from '../api';
 
 function LoginPage() {
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const data = {
+            username: e.target[0].value,
+            password: e.target[1].value
+        }
+        api.post('auth/token/', data)
+        .then(response => {
+            localStorage.setItem('access', response.data.access);
+            localStorage.setItem('refresh', response.data.refresh);
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+        // SAU KHI LOGIN THÀNH CÔNG, CHUYỂN HƯỚNG YÊU CẦU NHẬP USERNAME
+    }
+    const googleLogin = () => {
+        const callbackUrl = `${window.location.origin}`;
+        const googleClientId = "776839518387-uge8lkql0kv3p8jnnpejv1r3gi7jjlmr.apps.googleusercontent.com";
+        const targetUrl = `https://accounts.google.com/o/oauth2/auth?redirect_uri=${encodeURIComponent(
+          callbackUrl
+        )}&response_type=token&client_id=${googleClientId}&scope=openid%20email%20profile`;
+    
+        window.location.href = targetUrl;
+    };
     const func = () => {
         const hiddenFunc = document.querySelector('.hidden-func');
         if(hiddenFunc.classList.contains('show')){
@@ -26,7 +53,7 @@ function LoginPage() {
                     {/* login */}
                     <div className="form-box login">
                         <h2 className="animation" style={{'--i': 0, '--j':10}}>ĐĂNG NHẬP</h2>
-                        <form action="#">
+                        <form onSubmit={handleLogin} action="#">
                             <div className="input-box animation" style={{'--i': 1, '--j':11}}>
                                 <input type="text" required></input>
                                 <label>Tên đăng nhập</label>
@@ -44,7 +71,7 @@ function LoginPage() {
                             <div className="log-icon animation" style={{'--i': 3, '--j':15}}>
                                 <label>Bạn muốn đăng nhập bằng: </label> 
                                 <i className='bx bxs-lock-alt' ><FaFacebookF /></i>
-                                <i className='bx bxs-lock-alt' ><FcGoogle  /></i>
+                                <i onClick={googleLogin} className='bx bxs-lock-alt' ><FcGoogle  /></i>
                             </div>
                             <div className="logreg-link animation" style={{'--i': 4, '--j':16}}>
                                 <p>Bạn chưa có tài khoản? <a href="#" className="register-link" onClick={LogAndReg}>Đăng ký</a></p>
