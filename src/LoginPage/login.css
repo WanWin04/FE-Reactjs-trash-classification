@@ -18,7 +18,7 @@ background-size: contain;
 .login-box{
   position: absolute;
   top: 5vh;
-  right: 0;
+  right: 5%;
   width: 30rem;
   min-height: 35rem;
 }
@@ -284,7 +284,6 @@ background-size: contain;
   
 @media (min-width: 740px) and (max-width: 1023px){
   #page-body{
-    font-size: 15px !important;
     height: calc(100vh - 80px); 
     min-height: 30rem;
   }
@@ -334,7 +333,6 @@ background-size: contain;
   #page-body{
     height: calc(100vh - 60px);
     min-height: 28rem;
-    font-size: 14px;
   }
   .login-box{
     top:0;
