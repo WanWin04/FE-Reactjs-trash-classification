@@ -1,7 +1,7 @@
 #page-body {
   position: relative;
   height: calc(100vh - 100px); 
-  min-height: 30rem;
+  min-height: 30em;
   max-width: 100%;
   overflow: hidden;
   background-color: #AAD0A1;
@@ -12,12 +12,13 @@ min-width: 100vw;
 min-height: calc(100vh - 100px);
 left: 0px;
 top: 0;
-background: url(./images/main-bg.jpg) center no-repeat;
-background-size: contain;
+background: url(./images/main-bg.jpg) no-repeat;
+background-position: 20%;
+background-size: 60%;
 }
 .login-box{
   position: absolute;
-  top: 5vh;
+  top: 7vh;
   right: 5%;
   width: 30rem;
   min-height: 35rem;
@@ -26,42 +27,56 @@ background-size: contain;
 .login-box .form-box.login{
   left: 0;
   padding: 0 3vw 0 3vw;
+  border: 4px solid #06a700;
+  box-shadow: 3px 6px #06a700;
+  border-radius: 14%;
 }
-  
+.login-box.active .form-box.login{
+  border: unset;
+  box-shadow: unset;
+}
+.login-box.active2 .form-box.login{
+  border: unset;
+  box-shadow: unset;
+}
 .login-box .form-box.login .animation{
   transform: translateX(0);
   transition: .7s ease;
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.1s*var(--j));
+  transition-delay: calc(.02s*var(--j));
 }
 
 .login-box.active .form-box.login .animation{
   transform: translateX(-120%);
   opacity: 0;
   filter: blur(10px);
-  transition-delay: calc(.1s*var(--i));
+  transition-delay: calc(.02s*var(--i));
 }
 .login-box.active2 .form-box.login .animation{
   transform: translateX(-120%);
   opacity: 0;
   filter: blur(10px);
-  transition-delay: calc(.1s*var(--i));
+  transition-delay: calc(.02s*var(--i));
 }
 
 .login-box .form-box.register{
   position: absolute;
-  top: 0%;
+  top: -5%;
   right: 0;
   width: 30rem;
   min-height: 32rem;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
+
 }
 
 .login-box.active .form-box.register{
   pointer-events: auto;
+  border: 4px solid #06a700;
+  box-shadow: 3px 6px #06a700;
+  border-radius: 14%;
 }
 
 .login-box .form-box.register .animation{
@@ -69,14 +84,14 @@ background-size: contain;
   opacity: 0;
   filter: blur(10px);
   transition: .7s ease;
-  transition-delay: calc(.1s*var(--j));
+  transition-delay: calc(.02s*var(--j));
 }
 
 .login-box.active .form-box.register .animation{
   transform: translateX(0);
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.1s*var(--i));
+  transition-delay: calc(.02s*var(--i));
 }
 
 
@@ -88,7 +103,6 @@ background-size: contain;
   top: 0;
   right: 0;
   width: 30rem;
-  min-height: 32rem;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
@@ -98,6 +112,9 @@ background-size: contain;
 
 .login-box.active2 .form-box.forgotpass{
   pointer-events: auto;
+  border: 4px solid #06a700;
+  box-shadow: 3px 6px #06a700;
+  border-radius: 14%;
 }
 
 .login-box .form-box.forgotpass .animation{
@@ -105,14 +122,14 @@ background-size: contain;
   opacity: 0;
   filter: blur(10px);
   transition: .7s ease;
-  transition-delay: calc(.1s*var(--j));
+  transition-delay: calc(.02s*var(--j));
 }
 
 .login-box.active2 .form-box.forgotpass .animation{
   transform: translateX(0);
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.1s*var(--i));
+  transition-delay: calc(.02s*var(--i));
 }
 
 .forgotpass button {
@@ -251,6 +268,38 @@ background-size: contain;
   top: 0;
 
 }
+.butn{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: 2px solid #f8ffe2;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #35901e;
+  font-weight: 600;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.butn::before{
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: linear-gradient(#afd72a, #cdfc34, #e5fe92, #dcff74);
+  z-index: -1;
+  transition: .5s;
+}
+
+.butn:hover::before{
+  top: 0;
+
+}
 
 .btn:last-child {
   top: -20px;
@@ -281,7 +330,7 @@ background-size: contain;
   text-decoration: underline;
   color:#35901e
 }
-  
+
 @media (min-width: 740px) and (max-width: 1023px){
   #page-body{
     height: calc(100vh - 80px); 
@@ -289,14 +338,13 @@ background-size: contain;
   }
   #main-bg{
     min-height: calc(100vh - 80px); 
-    background-size: contain;
   }
   .login-box{
-    top:0;
-    right: 0%;
+    top:5%;
+    right: 5%;
     width: 25rem;
   }
-  .form-box h2{
+  /* .form-box h2{
     font-size: 30px;
     color: #277114;
     text-align: center;
@@ -309,7 +357,7 @@ background-size: contain;
   .form-box .input-box{
     height: 40px;
     margin: 20px 0;
-  }
+  } */
   .login-box .form-box.forgotpass{
     top: 5vh;
     right: -10vw;
@@ -335,8 +383,8 @@ background-size: contain;
     min-height: 28rem;
   }
   .login-box{
-    top:0;
-    right: 10vw;
+    top:5%;
+    right: 5vw;
     width: 25rem;
   }
   .login-box .form-box.forgotpass{
@@ -349,6 +397,9 @@ background-size: contain;
     top: 5vh;
     right: 2.5vw;
     width: 50vw;
+  }
+  .input-box input{
+    padding-right: 10px;
   }
   .backtolog{
     text-decoration: underline;
@@ -372,7 +423,7 @@ background-size: contain;
     margin: 15px 0 5px;
   }
   .login-box{
-    top:0;
+    top:5%;
     right: 10vw;
     width: 80vw;
     height: calc(100vh - 60px);
