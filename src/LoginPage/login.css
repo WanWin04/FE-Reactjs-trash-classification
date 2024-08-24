@@ -1,35 +1,34 @@
 #page-body {
   position: relative;
   height: calc(100vh - 100px); 
-  min-height: 30em;
+  min-height: 30rem;
   max-width: 100%;
   overflow: hidden;
   background-color: #AAD0A1;
 }
 #main-bg {
-position: absolute;
-min-width: 100vw;
-min-height: calc(100vh - 100px);
-left: 0px;
-top: 0;
-background: url(./images/main-bg.jpg) no-repeat;
-background-position: 20%;
-background-size: 60%;
+  min-width: 100vw;
+  height: 100%;
+  /* position: absolute; */
+  min-height: calc(100vh - 100px);
+  background: url(./images/main-bg.jpg) center no-repeat;
+  background-size: 60%;
+  background-position: 30% center;
 }
 .login-box{
   position: absolute;
-  top: 7vh;
+  top: 15%;
   right: 5%;
   width: 30rem;
-  min-height: 35rem;
+  /* min-height: 35rem; */
 }
 
 .login-box .form-box.login{
   left: 0;
   padding: 0 3vw 0 3vw;
-  border: 4px solid #06a700;
+  border: 5px solid #06a700;
+  border-radius: 15%;
   box-shadow: 3px 6px #06a700;
-  border-radius: 14%;
 }
 .login-box.active .form-box.login{
   border: unset;
@@ -39,44 +38,54 @@ background-size: 60%;
   border: unset;
   box-shadow: unset;
 }
+.login-box.active3 .form-box.login{
+  border: unset;
+  box-shadow: unset;
+}
 .login-box .form-box.login .animation{
   transform: translateX(0);
   transition: .7s ease;
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.02s*var(--j));
+  transition-delay: calc(.01s*var(--j));
 }
 
 .login-box.active .form-box.login .animation{
   transform: translateX(-120%);
   opacity: 0;
   filter: blur(10px);
-  transition-delay: calc(.02s*var(--i));
+  transition-delay: calc(.01s*var(--i));
 }
 .login-box.active2 .form-box.login .animation{
   transform: translateX(-120%);
   opacity: 0;
   filter: blur(10px);
-  transition-delay: calc(.02s*var(--i));
+  transition-delay: calc(.01s*var(--i));
+}
+.login-box.active3 .form-box.login .animation{
+  transform: translateX(-120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition-delay: calc(.01s*var(--i));
 }
 
 .login-box .form-box.register{
   position: absolute;
-  top: -5%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   width: 30rem;
   min-height: 32rem;
   padding: 0 60px 0 40px;
   box-sizing: border-box;
   pointer-events: none;
-
 }
 
 .login-box.active .form-box.register{
   pointer-events: auto;
-  border: 4px solid #06a700;
+  border: 5px solid #06a700;
+  border-radius: 15%;
   box-shadow: 3px 6px #06a700;
-  border-radius: 14%;
 }
 
 .login-box .form-box.register .animation{
@@ -84,14 +93,14 @@ background-size: 60%;
   opacity: 0;
   filter: blur(10px);
   transition: .7s ease;
-  transition-delay: calc(.02s*var(--j));
+  transition-delay: calc(.01s*var(--j));
 }
 
 .login-box.active .form-box.register .animation{
   transform: translateX(0);
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.02s*var(--i));
+  transition-delay: calc(.01s*var(--i));
 }
 
 
@@ -100,7 +109,8 @@ background-size: 60%;
 
 .login-box .form-box.forgotpass{
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   width: 30rem;
   padding: 0 60px 0 40px;
@@ -112,9 +122,9 @@ background-size: 60%;
 
 .login-box.active2 .form-box.forgotpass{
   pointer-events: auto;
-  border: 4px solid #06a700;
+  border: 5px solid #06a700;
+  border-radius: 15%;
   box-shadow: 3px 6px #06a700;
-  border-radius: 14%;
 }
 
 .login-box .form-box.forgotpass .animation{
@@ -122,20 +132,62 @@ background-size: 60%;
   opacity: 0;
   filter: blur(10px);
   transition: .7s ease;
-  transition-delay: calc(.02s*var(--j));
+  transition-delay: calc(.01s*var(--j));
 }
 
 .login-box.active2 .form-box.forgotpass .animation{
   transform: translateX(0);
   opacity: 1;
   filter: blur(0);
-  transition-delay: calc(.02s*var(--i));
+  transition-delay: calc(.01s*var(--i));
 }
 
 .forgotpass button {
   margin-top: 20px;
 }
 
+
+
+/*  */
+.login-box .form-box.enterName{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 30rem;
+  padding: 0 60px 0 40px;
+  box-sizing: border-box;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box.active3 .form-box.enterName{
+  pointer-events: auto;
+  border: 5px solid #06a700;
+  border-radius: 15%;
+  box-shadow: 3px 6px #06a700;
+}
+
+.login-box .form-box.enterName .animation{
+  transform: translateX(120%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: .7s ease;
+  transition-delay: calc(.01s*var(--j));
+}
+
+.login-box.active3 .form-box.enterName .animation{
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition-delay: calc(.01s*var(--i));
+}
+
+.enterName button {
+  margin-top: 20px;
+}
+/*  */
 .backtolog {
   /* position: absolute; */
   max-height: fit-content;
@@ -273,7 +325,7 @@ background-size: 60%;
   width: 100%;
   height: 45px;
   background: transparent;
-  border: 2px solid #f8ffe2;
+  border: 2px solid lightgreen;
   outline: none;
   border-radius: 30px;
   cursor: pointer;
@@ -291,7 +343,7 @@ background-size: 60%;
   left: 0;
   width: 100%;
   height: 300%;
-  background: linear-gradient(#afd72a, #cdfc34, #e5fe92, #dcff74);
+  background: linear-gradient(#ddf883, #bce01e, #dcff68, #f8ffe2);
   z-index: -1;
   transition: .5s;
 }
@@ -330,7 +382,7 @@ background-size: 60%;
   text-decoration: underline;
   color:#35901e
 }
-
+  
 @media (min-width: 740px) and (max-width: 1023px){
   #page-body{
     height: calc(100vh - 80px); 
@@ -338,29 +390,28 @@ background-size: 60%;
   }
   #main-bg{
     min-height: calc(100vh - 80px); 
+    background-position: 20%;
+
   }
   .login-box{
-    top:5%;
+    top:10%;
     right: 5%;
-    width: 25rem;
+    width: 26rem;
   }
-  /* .form-box h2{
+  .form-box h2{
     font-size: 30px;
     color: #277114;
     text-align: center;
     margin: 20px 0 10px;
   }
   .form-box .input-box{
-    height: 10vh;
-    margin: 5vh 0;
-  }
-  .form-box .input-box{
     height: 40px;
     margin: 20px 0;
-  } */
+  }
   .login-box .form-box.forgotpass{
     top: 5vh;
-    right: -10vw;
+    right: 0;
+    width: 25rem;
   }
   .login-box .form-box.form-box.register{
     top: 5vh;
@@ -382,24 +433,28 @@ background-size: 60%;
     height: calc(100vh - 60px);
     min-height: 28rem;
   }
+  #main-bg{
+    display: none;
+  }
   .login-box{
-    top:5%;
-    right: 5vw;
+    top:10%;
+    right:50%;
+    transform:translateX(50%);
     width: 25rem;
   }
   .login-box .form-box.forgotpass{
-    top: 5vh;
+    top: 0;
     right: 0;
-    width: 50vw;
+    width: 25rem;
   }
   .login-box .form-box.form-box.register{
-    padding: 0;
-    top: 5vh;
-    right: 2.5vw;
-    width: 50vw;
+    top: 0;
+    right:50%;
+    transform:translateX(50%);
+    width: 30rem;
   }
   .input-box input{
-    padding-right: 10px;
+    padding-right: 5px;
   }
   .backtolog{
     text-decoration: underline;
@@ -423,29 +478,36 @@ background-size: 60%;
     margin: 15px 0 5px;
   }
   .login-box{
-    top:5%;
-    right: 10vw;
-    width: 80vw;
-    height: calc(100vh - 60px);
+    top:10%;
+    right:50%;
+    transform:translateX(50%);
+    width: 90vw;
+  }
+  .input-box input{
+    padding-right: 0;
   }
   .forgot {
     margin: -10px 0 10px 65%;
     max-height: fit-content;
     min-width: fit-content;
   }
+  .login-box .form-box.login{
+    margin-top: 5%;
+  }
   .login-box .form-box.forgotpass{
-    top: 5vh;
-    right: 0vw;
-    width: 80vw;
+    top:10%;
+    right:50%;
+    transform:translateX(50%);
+    width: 90vw;
     padding: 0;
     margin: 0;
   }
   .login-box .form-box.form-box.register{
-    top: 5vh;
-    right: 2.5vw;
-    width: 80vw;
-    padding: 0;
-    margin: 0;
+    top: 0%;
+    right:50%;
+    transform:translateX(50%);
+    width: 90vw;
+
   }
   .backtolog{
     text-decoration: underline;
@@ -456,9 +518,22 @@ background-size: 60%;
   .logreg-link p a {
     text-decoration: underline;
   }
+  .butn{
+    width: 70vw;
+  }
 }
-
-
+@media (max-height: 640px) {
+  .form-box .input-box{
+    height: 40px;
+    margin: 20px 0;
+  }
+  .login-box .form-box.register{
+    min-height: 26rem;
+  }
+  .login-box{
+    top: 5%;
+  }
+}
 
 
 
