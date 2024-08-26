@@ -1,7 +1,7 @@
 import './login.css';
 import { FaUser, FaLock, FaFacebookF } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
-import { LogAnd4got, LogAndReg} from './goto';
+import { LogAnd4got, LogAndReg,GgAndEnterName} from './goto';
 
 function loginBox(){
     return (
@@ -25,7 +25,7 @@ function loginBox(){
                             <div className="log-icon animation" style={{'--i': 3, '--j':15}}>
                                 <label>Bạn muốn đăng nhập bằng: </label> 
                                 <i className='bx bxs-lock-alt' ><FaFacebookF /></i>
-                                <i className='bx bxs-lock-alt' ><FcGoogle  /></i>
+                                <i className='bx bxs-lock-alt' onClick={GgAndEnterName}><FcGoogle  /></i>
                             </div>
                             <div className="logreg-link animation" style={{'--i': 4, '--j':16}}>
                                 <p>Bạn chưa có tài khoản? <a href="#" className="register-link" onClick={LogAndReg}>Đăng ký</a></p>
