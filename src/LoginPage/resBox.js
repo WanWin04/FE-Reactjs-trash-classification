@@ -1,7 +1,7 @@
 import './login.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
-import { LogAndReg, ResAndEnterName } from './goto';
+import { LogAndReg } from './goto';
 function resBox() {
     return (
         <div className="form-box register">
@@ -27,7 +27,7 @@ function resBox() {
                                 <label>Nhập lại mật khẩu</label>
                                 <i className='bx bxs-lock-alt' ><FaLock /></i>
                             </div>
-                            <button onClick={ResAndEnterName} type="submit" className="btn animation" style={{'--i':15, '--j':4}}>Đăng ký</button>
+                            <button type="submit" className="btn animation" style={{'--i':15, '--j':4}}>Đăng ký</button>
                             <div className="logreg-link animation" style={{'--i':16, '--j':5}}>
                                 <p>Bạn đã có tài khoản? <a href="#" className="login-link" onClick={LogAndReg}>Đăng nhập</a></p>
                             </div>

@@ -1,5 +1,5 @@
 import './login.css';
-import { LogAnd4got, ResAndEnterName} from './goto';
+import { LogAnd4got, GgAndEnterName} from './goto';
 import { FaUser} from 'react-icons/fa';
 
 function enterName() {
@@ -12,7 +12,7 @@ function enterName() {
                     <label>Họ và tên</label>
                     <i className='bx bxs-user'><FaUser /></i>
                 </div>
-                <div className='backtolog animation'  style={{'--i': 14, '--j':4}} onClick={ResAndEnterName}>
+                <div className='backtolog animation'  style={{'--i': 14, '--j':4}} onClick={GgAndEnterName}>
                     Quay lại
                 </div>
                 <button type="submit" className="btn animation" style={{'--i':15, '--j':5}} onClick={LogAnd4got}>XÁC NHẬN</button>
