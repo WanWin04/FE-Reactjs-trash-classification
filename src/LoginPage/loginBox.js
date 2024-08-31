@@ -1,5 +1,6 @@
 import './login.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaFacebookF } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
 import { LogAnd4got, LogAndReg,GgAndEnterName} from './goto';
@@ -9,7 +10,9 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from '../const';
 function LoginBox(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    async function login(){
+    const navigate = useNavigate();
+    async function login(e){
+        e.preventDefault();
         const data = {
             username: username,
             password: password
@@ -18,6 +21,7 @@ function LoginBox(){
             const resp = await api.post('/auth/token/', data);
             localStorage.setItem(ACCESS_TOKEN, resp.data.access);
             localStorage.setItem(REFRESH_TOKEN, resp.data.refresh);
+            navigate('/');
         }
         catch(err){
             console.log(err.response.data);
