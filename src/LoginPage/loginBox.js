@@ -5,7 +5,7 @@ import { FaUser, FaLock, FaFacebookF } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
 import { LogAnd4got, LogAndReg,GgAndEnterName} from './goto';
 import api from '../api';
-import { ACCESS_TOKEN, REFRESH_TOKEN } from '../const';
+import { ACCESS_TOKEN, REFRESH_TOKEN, GET_ACCESS_TOKEN_URL } from '../const';
 
 function LoginBox(){
     const [username, setUsername] = useState('');
@@ -18,7 +18,7 @@ function LoginBox(){
             password: password
         }
         try{
-            const resp = await api.post('/auth/token/', data);
+            const resp = await api.post(GET_ACCESS_TOKEN_URL, data);
             localStorage.setItem(ACCESS_TOKEN, resp.data.access);
             localStorage.setItem(REFRESH_TOKEN, resp.data.refresh);
             navigate('/');
