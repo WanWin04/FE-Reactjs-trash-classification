@@ -1,13 +1,15 @@
 import Header from './Header/header';
 import LoginPage from './LoginPage/login';
+import ToolBar from './ToolBar/ToolBar';
+import HomePage from './HomePage/homePage';
 import './App.css';
 
 function App() {
     
     return (
         <div>
-            <Header />
-            <LoginPage />
+            <ToolBar />
+            <HomePage />
         </div>
     );
 }
