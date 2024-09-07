@@ -5,6 +5,81 @@
 .fobj{
     height: 450px;
     width: 100vw;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     
+}
+
+.slider-container {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.slider-value {
+  font-size: 1.2em;
+  color: #333;
+}
+.dot{
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon0{
+  background: url('./images/icon-bg-1.png') no-repeat center;
+  background-size: contain;
+}
+.icon1{
+  background: url('./images/icon-bg-2.png') no-repeat center;
+  background-size: contain;
+}
+.icon2{
+  background: url('./images/icon-bg-3.png') no-repeat center;
+  background-size: contain;
+}
+ul .slick-active{
+  border-bottom: 4px solid black;
+  height: 60px;
+  width: 60px;
+}
+.slick-dots.custom-dots{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  bottom: 5%;
+  right: 10%;
+}
+.slick-dots.custom-dots li{
+  height: 100%;
+  width: 45px;
+  
+}
+#slide-1{
+  height: 300px;
+  width: 100vw;
+  background: url('./images/bg-1.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#slide-2{
+  height: 300px;
+  width: 100vw;
+  background: url('./images/bg-2.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#slide-3{
+  height: 300px;
+  width: 100vw;
+  background: url('./images/bg-3.png') no-repeat;
+  background-size: contain;
+  background-position: center;
 }
