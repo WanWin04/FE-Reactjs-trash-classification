@@ -1,10 +1,10 @@
 .homePage-body{
     padding-top: 100px;
-    width: 100vw;
+    width: 100%;
 }
 .fobj{
-    height: 450px;
-    width: 100vw;
+    /* height: 450px; */
+    width: 100%;
     /* background-color: antiquewhite; */
     
 }
@@ -64,22 +64,129 @@ ul .slick-active{
 }
 #slide-1{
   height: 300px;
-  width: 100vw;
+  width: 100%;
   background: url('./images/bg-1.png') no-repeat;
   background-size: contain;
   background-position: center;
 }
 #slide-2{
   height: 300px;
-  width: 100vw;
+  width: 100%;
   background: url('./images/bg-2.png') no-repeat;
   background-size: contain;
   background-position: center;
 }
 #slide-3{
   height: 300px;
-  width: 100vw;
+  width: 100%;
   background: url('./images/bg-3.png') no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.lism{
+  margin: 10px 0 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lism h2{
+  color: #277114;
+}
+.lism.but{
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+}
+.lism.but > div{
+  height: 100px;
+  width: 100px;
+  margin: 0 90px;
+  border-radius: 100%;
+  background-color: #D9D9D9;
+  text-align: center;
+  align-content: center;
+}
+.lism.but > h2{
+  max-width: 75%;
+  height: auto;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: normal;
+}
+.lism.but > p{
+  margin: 0 0 20px 0;
+  height: auto;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: normal;
+}
+.lism.but:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.lism.zone{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.intro-zone{
+  height: 700px;
+  width: 100%;
+  background-color: rgba(79, 187, 90, 0.2);
+}
+.vide-zone{
+  height: 60%;
+  width: 100%;
+  padding-left: 7%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.vide-zone > div:first-child{
+  width: 30%;
+  height: 70%;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  background-color: #D9D9D9;
+}
+.vide-zone > div:last-child{
+  width: 50%;
+  height: 70%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+.vide-zone > div:last-child > h2{
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+  color: #277114;
+}
+.vide-zone > div:last-child > p{
+  padding-left: 10%;
+}
+.intro-btn{
+  height: 40%;
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro-btn > div{
+  height: 40%;
+  width: 20%;
+  background-color: #277114;
+  border-radius: 30px;
 }
