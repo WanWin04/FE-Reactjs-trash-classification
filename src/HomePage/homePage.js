@@ -51,14 +51,13 @@ function HomePage(){
           }
         ]
     };
-    console.log(Slider.prototype);
     return (
       <div>
         <ToolBar />
 
         <div className="homePage-body">
             <div className='fobj'>
-                <div style={{ width: "80%", margin: "auto" }}>
+                <div style={{ width: "80%", margin: "0 auto" }}>
                     <Slider {...settings} >
                         <div id='slide-1'>
                         </div>
@@ -74,7 +73,7 @@ function HomePage(){
               <div className='lism zone'>
                 <div className='lism but'>
                   <div></div>
-                  <h2>Hôm nay là một ngày đẹp trời</h2>
+                  <h2>Hôm nay là một ngày đẹp trời xxxx xxxx xxxx xxxxxxxx xxxx xxxx </h2>
                   <p>Mới bảo ngày đẹp trời mà mưa sấp mặt</p>
                 </div>
                 <div className='lism but'>
