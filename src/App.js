@@ -1,4 +1,3 @@
-import Header from './Header/header';
 import LoginPage from './LoginPage/login';
 import Hello from './components/hello';
 import ProtectedRoute from './components/ProtectedRoute';
