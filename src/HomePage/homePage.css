@@ -4,6 +4,8 @@
 }
 .fobj{
     width: 100%;
+    background-color: rgba(6, 115, 17, 0.2);
+    height: 350px;
 }
 
 .slider-container {
@@ -61,21 +63,21 @@ ul .slick-active{
   margin: 0;
 }
 #slide-1{
-  height: 300px;
+  height: 350px;
   width: 100%;
   background: url('./images/bg-1.png') no-repeat;
   background-size: contain;
   background-position: center;
 }
 #slide-2{
-  height: 300px;
+  height: 350px;
   width: 100%;
   background: url('./images/bg-2.png') no-repeat;
   background-size: contain;
   background-position: center;
 }
 #slide-3{
-  height: 300px;
+  height: 350px;
   width: 100%;
   background: url('./images/bg-3.png') no-repeat;
   background-size: contain;
@@ -191,6 +193,7 @@ ul .slick-active{
 @media (min-width: 740px) and (max-width: 1023px){
   .homePage-body{
     padding-top: 80px;
+    
   }
   .intro-zone{
     height: 40vw;
@@ -202,29 +205,23 @@ ul .slick-active{
     width: 40px;
   }
 }
-@media (max-width: 600px){
-  /* #slide-1, #slide-2, #slide-3{
-    height: 200px;
+@media (max-width: 1340px){
+  .fobj, #slide-1, #slide-2, #slide-3{
+    height: 250px;
   }
-  .slick-dots.custom-dots{
-    right: 15%;
-  }
-  .slick-dots.custom-dots li{
-    width: 40px;
-    scale: 0.8;
-  } */
 }
-@media (max-width: 390px){
-  /* #slide-1, #slide-2, #slide-3{
+@media (max-width: 840px){
+  .fobj, #slide-1, #slide-2, #slide-3{
     height: 150px;
   }
-  .slick-dots.custom-dots{
-    right: 12%;
+}
+@media(max-width: 500px){
+  .fobj, #slide-1, #slide-2, #slide-3{
+    height: 100px;
   }
   .slick-dots.custom-dots li{
-    height: 100%;
-    width: 30px;
-  } */
+    width: 20px;
+  }
 }
 @media (max-width: 739px){
   .homePage-body{

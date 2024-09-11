@@ -57,7 +57,7 @@ function HomePage(){
 
         <div className="homePage-body">
             <div className='fobj'>
-                <div style={{ width: "80%", margin: "0 auto" }}>
+                <div style={{ width: "60%", margin: "auto" }}>
                     <Slider {...settings} >
                         <div id='slide-1'>
                         </div>
