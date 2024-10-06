@@ -5,7 +5,8 @@ import ForgotBox from './forgotBox';
 import EnterName from './enterName';
 import { func } from './goto';
 import Header from '../Header/header';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
+
 function LoginPage() {
     return (
         <div>
@@ -25,7 +26,7 @@ function LoginPage() {
                         <EnterName />
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

@@ -1,0 +1,221 @@
+#navbar {
+    height: 100px;
+    max-width: 100%;
+    padding: 0 2.8%;
+    background-color: #75d47e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  #logo-zone {
+    height: 100px;
+    width: 100px;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  #logo {
+    min-height: 70px;
+    min-width: 70px;
+    border-radius: 100%;
+    border: none;
+  }
+  
+  #func-head {
+    height: 100%;
+    min-width: 50%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #func-head > div {
+    height: 100%;
+    width: 7vw;
+    padding: 0 10px;
+    text-align: center;
+    align-content: center;
+  }
+  
+  #func-head > div.active {
+    color: #FFA500;
+  }
+  
+  
+  #func-head div:hover {
+    background-color: #2C473E;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .user-login {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+  
+  .user-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .user-login span {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  #mobile-func {
+    display: none;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 28%;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: transparent;
+    color: green;
+  }
+  
+  #mobile-func:hover {
+    cursor: pointer;
+    background-color: darkgray;
+  }
+  
+  .hidden-func {
+    display: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    width: 100px;
+    opacity: 0;
+    height: 85vh;
+    background-color: #fff;
+    right: 0;
+    top: 60px;
+    position: absolute;
+    transition: linear 0.3s;
+    z-index: 99;
+  }
+  
+  .hidden-func li {
+    list-style: none;
+    padding: 15px 0 15px 20px;
+    border-bottom: 2px solid #76e039;
+  }
+  
+  .hidden-func li:hover {
+    background-color: #76e039;
+    cursor: pointer;
+  }
+  
+  .show {
+    width: 200px;
+    opacity: 1;
+    right: 0;
+  }
+  
+  .user-login {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+  
+  .user-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 50%; 
+    background-color: #fff; 
+    border: 2px solid #138830; 
+    padding: 5px; 
+  }
+  
+  .user-login span {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  
+  @media (min-width: 740px) and (max-width: 1023px) {
+    body {
+        max-height: 100vh;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+  
+    #header {
+        max-width: 100%;
+        font-size: 11px;
+        height: 80px;
+    }
+  
+    .bton {
+        margin-left: 10%;
+    }
+  
+    #logo-zone {
+        height: 80px;
+        width: 80px;
+    }
+  
+    #logo {
+        min-height: 50px;
+        min-width: 50px;
+    }
+  }
+  
+  @media (max-width: 740px) {
+    #header {
+        font-size: 11px;
+        max-width: 100%;
+        height: 60px;
+    }
+  
+    .bton {
+        margin-left: 10%;
+    }
+  
+    #func-head {
+        display: none;
+    }
+  
+    #logo-zone {
+        height: 60px;
+        width: 60px;
+    }
+  
+    #logo {
+        min-height: 50px;
+        min-width: 50px;
+    }
+  
+    #mobile-func {
+        display: block;
+        right: 100px;
+    }
+  
+    .bton {
+        padding: 5px;
+    }
+  
+    .hidden-func {
+        height: calc(100vh - 60px);
+        display: block;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    #mobile-func {
+        right: 30%;
+    }
+  }
+  

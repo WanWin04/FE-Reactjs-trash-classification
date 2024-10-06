@@ -1,0 +1,19 @@
+.setup {
+    display: flex;                 
+    justify-content: center;        
+    align-items: center;           
+    padding: 0;                    
+    list-style-type: none;          
+}
+
+.setup li {
+    margin: 30px 20px;             
+    font-size: 18px;
+    cursor: pointer;
+    list-style-type: none;          
+}
+
+.setup li.active {
+    color: #277114;                 
+    text-decoration: underline; 
+}
